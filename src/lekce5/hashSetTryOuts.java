@@ -4,15 +4,8 @@ import java.util.HashSet;
 
 public class hashSetTryOuts {
 
-	public void TrySet{
+	public void TrySet(){ /*za nazvom metody musia byt zatvorky*/
 	
-		HashSet<String> setOfStrings =new HashSet<>();
-		
-		
-		
-		
-	}
-	
-	
-	
+		HashSet<String> setOfStrings =new HashSet<>();	
+	}	
 }

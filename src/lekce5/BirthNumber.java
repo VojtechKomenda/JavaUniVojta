@@ -1,26 +1,26 @@
 package lekce5;
 
 public class BirthNumber {
-String BNumber; 
+	String BNumber; 
 	
 	
 
-public BirthNumber (String BNumber) {
-		this.BNumber=BNumber;
-		}
-	
-	
-	
-	
-	
-public Boolean IsValid () {
-	   Boolean result = false; 
-	   
-	   result = this.IsValidLeght()& this.IsValidStructure()& this.IsValid11Divison();
-	   
-	   return result;   
-   } 	
-	
+	public BirthNumber (String BNumber) {
+			this.BNumber=BNumber;
+			}
+		
+		
+		
+		
+		
+	public Boolean IsValid () {
+		   Boolean result = false; 
+		   
+		   result = this.IsValidLeght( )& this.IsValidStructure() & this.IsValid11Divison();
+		   
+		   return result;   
+	   } 	
+		
    
    
    
@@ -59,46 +59,46 @@ public Boolean IsValid () {
 	   BirthNumberSplited= this.BirthNumberSplit(); 
 	      
 	   result=
-			   BirthNumberSplited[0].length()==6
-			      |
-			      		(BirthNumberSplited[0].indexOf(3)==0
-			      		|
-			      		BirthNumberSplited[0].indexOf(3)==1
-			      		|
-					    BirthNumberSplited[0].indexOf(3)==5
-					    |
-					    BirthNumberSplited[0].indexOf(3)==6);  	   					   
+   			BirthNumberSplited[0].length()==6
+   			|
+      		(BirthNumberSplited[0].indexOf(3)==0
+      		|
+      		BirthNumberSplited[0].indexOf(3)==1
+      		|
+		    BirthNumberSplited[0].indexOf(3)==5
+		    |
+		    BirthNumberSplited[0].indexOf(3)==6);  	   					   
 	 return result;
    }
 
-private Boolean IsValid11Divison (){
-	   int i;
-	   long power=1;
-	   
-	   long Rest;
-	   
-	   
-	   Boolean result=false;	   	   	   
-	   String BirthNumberSplited[]= new String [3];
-	   BirthNumberSplited= this.BirthNumberSplit();
-	   String BirthNumberWithoutDevider=this.BirthNumberWithoutDevider();
-	   long BirthNumber=0;
-	   	  
-	   for (i=BirthNumberWithoutDevider.length()-1; i>=0 ;i--)
-	   {
+	private Boolean IsValid11Divison (){
+		   int i;
+		   long power=1;
 		   
-		   BirthNumber=BirthNumber + Integer.parseInt(Character.toString(BirthNumberWithoutDevider.charAt(i)))*power;
-		   power=power * 10;		   
-	   }   
+		   long Rest;
 		   
-	   
-	   Rest=BirthNumber%11;
-	   
-	   if (Rest==0) {
-			   result=true;}		   
-		  	   					   
-	 return result;
-   }
+		   
+		   Boolean result=false;	   	   	   
+		   String BirthNumberSplited[]= new String [3]; /*naco je toto? Premennu BirthNumberSplited nikde nepouzivas*/
+		   BirthNumberSplited= this.BirthNumberSplit();
+		   String BirthNumberWithoutDevider=this.BirthNumberWithoutDevider();
+		   long BirthNumber=0;
+		   	  
+		   for (i=BirthNumberWithoutDevider.length()-1; i>=0 ;i--)
+		   {
+			   
+			   BirthNumber=BirthNumber + Integer.parseInt(Character.toString(BirthNumberWithoutDevider.charAt(i)))*power;
+			   power=power * 10;		   
+		   }   
+			   
+		   
+		   Rest=BirthNumber%11;
+		   
+		   if (Rest==0) {
+				   result=true;}		   
+			  	   					   
+		 return result;
+	   }
 
    
    
@@ -131,10 +131,8 @@ private Boolean IsValid11Divison (){
    
    private int Year() {
 	    int BirthNumberYear;
-   	   	char aa=this.BNumber.charAt(0);
-	    
-	    
-   	   	
+   	   	char aa=this.BNumber.charAt(0); /*naco je toto? nikde to nepouzivas*/
+
 	    BirthNumberYear = Integer.parseInt(Character.toString(this.BNumber.charAt(0)))*10 +Integer.parseInt(Character.toString(this.BNumber.charAt(1)));
 	    
 	   return BirthNumberYear;
@@ -148,12 +146,4 @@ private Boolean IsValid11Divison (){
 	   
 	   return BirthNumberSplited[0]+BirthNumberSplited[1];	   	   	   
    }
-   
-   
-   
-   
-   
-//
-	
-	
-}
+ }
