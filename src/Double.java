@@ -8,7 +8,7 @@ double var2=5.0;
 int result;
 		
 		
-result = (int)var1/var2;
+//result = (int)var1/var2;
 
 
 

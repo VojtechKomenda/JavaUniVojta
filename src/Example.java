@@ -3,7 +3,7 @@ public class Example {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int var1=*;
+		int var1;
 		int var2;
 		
 		var1=1024;

@@ -8,12 +8,11 @@ public class Devider {
 		int result;
 		boolean A;
 		boolean B;
-		if (varA!=0) {A=TRUE};
-		if (varB!=0) {B=TRUE};
+//		if (varA!=0) {A=TRUE};
+//		if (varB!=0) {B=TRUE};
 		
-		if (A&&B) then result=varA\varB;
+//		if (A&&B) then result=varA\varB;
 		
-				)
 		
 		
 		
